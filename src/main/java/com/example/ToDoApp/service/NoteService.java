@@ -1,8 +1,8 @@
-package com.example.ToDoApp.Service;
+package com.example.ToDoApp.service;
 
-import com.example.ToDoApp.Model.Note;
-import com.example.ToDoApp.Repository.NoteRepository;
-import com.example.ToDoApp.Exceptions.ObjectNotFoundException;
+import com.example.ToDoApp.model.Note;
+import com.example.ToDoApp.repository.NoteRepository;
+import com.example.ToDoApp.exceptions.ObjectNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

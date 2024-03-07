@@ -1,4 +1,4 @@
-package com.example.ToDoApp.Exceptions;
+package com.example.ToDoApp.exceptions;
 
 public class ObjectNotFoundException extends Exception {
     public ObjectNotFoundException(String errorMessage) {

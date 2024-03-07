@@ -1,4 +1,4 @@
-package com.example.ToDoApp.Model;
+package com.example.ToDoApp.model;
 
 import jakarta.persistence.*;
 import lombok.*;

@@ -1,8 +1,8 @@
-package com.example.ToDoApp.Controller;
+package com.example.ToDoApp.controller;
 
-import com.example.ToDoApp.Exceptions.ObjectNotFoundException;
-import com.example.ToDoApp.Model.Note;
-import com.example.ToDoApp.Service.NoteService;
+import com.example.ToDoApp.exceptions.ObjectNotFoundException;
+import com.example.ToDoApp.model.Note;
+import com.example.ToDoApp.service.NoteService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
