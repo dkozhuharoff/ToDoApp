@@ -1,0 +1,36 @@
+version: "3.7"
+services:
+  todo_app:
+    build: .
+    image: todo-app
+    container_name: todo-app
+    restart: always
+    ports:
+      - "8080:8080"
+    networks:
+      - todo-app-network
+#    environment:
+#      - spring.datasource.url=jdbc:mysql://mysqldb:3306/todoappnotes?allowPublicKeyRetrieval=true&useLegacyDatetimeCode=false&serverTimezone=UTC&useSSL=false
+    depends_on:
+      - mysqldb
+
+  mysqldb:
+    image: "mysql:8.0"
+    container_name: mysqldb
+    restart: always
+    ports:
+      - "3307:3306"
+    networks:
+      - todo-app-network
+    environment:
+      MYSQL_DATABASE: todoappnotes
+      MYSQL_USER: todo_app
+      MYSQL_PASSWORD: root
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_ROOT_HOST: '%'
+      DATABASE_HOST: mysqldb
+
+networks:
+  todo-app-network:
+    name: todo-app-network
+    external: true
